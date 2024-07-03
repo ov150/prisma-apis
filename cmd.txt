@@ -1,0 +1,8 @@
+"editor.formatOnSave": true
+
+npm i -D prisma
+npm i @prisma/client
+npx prisma init
+npx prisma studio
+npx prisma migrate dev
+npx prisma generate(when change the schema)

@@ -1,0 +1,29 @@
+GET http://localhost:4000/api/v1/products
+
+###
+
+GET http://localhost:4000/api/v1/product/1
+
+
+###
+POST http://localhost:4000/api/v1/create
+Content-Type: application/json
+
+{
+    "name" : "underscore mobile x2",
+    "price" : 50,
+    "categoryId" : 2
+}
+###
+DELETE http://localhost:4000/api/v1/product/1
+
+###
+
+PATCH http://localhost:4000/api/v1/update/1
+Content-Type: application/json
+
+{
+    "name": "only by underscore",
+    "price": 10,
+    "categoryId": 3
+}
