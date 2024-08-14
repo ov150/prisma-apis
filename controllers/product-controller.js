@@ -45,12 +45,12 @@ const createProductController = async (req, res, next) => {
     try {
         // const data = req.body;
         const product = await prisma.product.create({
-            data: req.body
-            // data: {
-            //     name: req.body.name,
-            //     price: req.body.price,
-            //     categoryId: req.body.categoryId
-            // }
+            // data: req.body
+            data: {
+                name: req.body.name,
+                price: req.body.price,
+                categoryId: req.body.categoryId
+            }
         })
         res.json({
             product,
@@ -66,7 +66,7 @@ const deleteProductController = async (req, res, next) => {
         const { id } = req.params;
         const product = await prisma.product.delete({
             where: {
-                id: Number(id)
+                id
             }
         })
         console.log(product);
@@ -84,7 +84,7 @@ const updateProductController = async (req, res, next) => {
         const { id } = req.params;
         const product = await prisma.product.update({
             where: {
-                id: Number(id)
+                id
             },
             data: req.body,
             include: {

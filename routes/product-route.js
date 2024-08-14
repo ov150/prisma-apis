@@ -12,10 +12,10 @@ const router = express.Router();
 router.get('/products', getAllProductsController)
 //http://localhost:4000/api/v1/product/123
 router.get('/product/:id', getProductController)
-//http://localhost:4000/api/v1/create
-router.post('/create', createProductController)
-//http://localhost:4000/api/v1/delete/123
-router.delete('/delete/:id', deleteProductController)
-//http://localhost:4000/api/v1/update
-router.patch('/update/:id', updateProductController)
+//http://localhost:4000/api/v1/product
+router.post('/product', createProductController)
+//http://localhost:4000/api/v1/product/123
+router.delete('/product/:id', deleteProductController)
+//http://localhost:4000/api/v1/product
+router.patch('/product/:id', updateProductController)
 export default router;
